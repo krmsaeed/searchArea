@@ -1,0 +1,24 @@
+﻿$weights: (Bold: bold,
+  Thin: 100,
+  Light: 300,
+  Medium: 500,
+  ExtraBold: 800,
+  Black: 850,
+  ExtraBlack: 900,
+  Regular: normal,
+);
+
+@each $name,
+$weight in $weights {
+  @font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-display: swap;
+    font-weight: $weight;
+    src: local('iranyekanweb#{$name}fanum'),
+    url('../fonts/woff/#{$name}.woff') format('woff'),
+    url('../fonts/iranyekanFaNum/#{$name}.woff2') format('woff2');
+    unicode-range: U+0030-0039, U+0600-06ff, U+200c-200e, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+  }
+}
+

@@ -1,0 +1,47 @@
+.flex-gap {
+  --width: 100%;
+  --gap: 1rem;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-top: calc(-1 * var(--gap)) !important;
+  margin-left: calc(-1 * var(--gap)) !important;
+  width: calc(var(--width) + var(--gap));
+
+  > * {
+    margin: var(--gap) 0 0 var(--gap) !important;
+  }
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.text {
+  color: $text-color !important;
+
+  &-light {
+    color: $text-light-color !important;
+  }
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  line-height: 1.8rem;
+}
+
+.no-result {
+  width: 25rem;
+  height: 12.25rem;
+
+  @screen sm {
+    width: 100%;
+  }
+}
